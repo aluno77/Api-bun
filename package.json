@@ -7,20 +7,36 @@
     "build": "bun build src/http/server.ts",
     "start": "NODE_ENV=production bun src/http/server.ts",
     "test": "bun test",
-    "generate": "drizzle-kit generate:pg"
+    "generate": "drizzle-kit generate:pg",
+    "studio": "drizzle-kit studio",
+    "migrate": "bun src/db/migrate.ts",
+    "seed": "bun src/db/seed.ts",
+    "lint": "eslint --ext .ts src --fix"
   },
   "devDependencies": {
+    "@faker-js/faker": "^8.4.1",
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/bun": "latest",
+    "@types/nodemailer": "^6.4.14",
     "@types/pg": "^8.11.4",
-    "drizzle-kit": "^0.20.14"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "chalk": "^5.3.0",
+    "drizzle-kit": "^0.20.14",
+    "eslint": "^8.57.0",
+    "eslint-plugin-drizzle": "^0.2.3",
+    "eslint-plugin-simple-import-sort": "latest",
+    "pg": "^8.11.3",
+    "typescript": "^5.4.3"
   },
   "dependencies": {
+    "@elysiajs/cookie": "^0.8.0",
+    "@elysiajs/jwt": "^1.0.2",
     "@paralleldrive/cuid2": "^2.2.2",
+    "dayjs": "^1.11.10",
     "drizzle-orm": "^0.30.4",
+    "drizzle-typebox": "^0.1.1",
     "elysia": "^1.0.7",
-    "postgres": "^3.4.3"
+    "nodemailer": "^6.9.13",
+    "postgres": "^3.4.3",
+    "zod": "^3.22.4"
   }
 }
